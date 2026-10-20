@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>10 Reasons Why I Love You 💙</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #c98be8;
+    --pink: #ee8fd0;
+    --blue: #8fcdf5;
+    --dark: #5b5268;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+
+    color: var(--dark);
+
+    background:
+        radial-gradient(
+            circle at 50% 5%,
+            #d9b9ff 0%,
+            transparent 22%
+        ),
+        linear-gradient(
+            180deg,
+            #eee1ff 0%,
+            #faf5ff 43%,
+            #ffffff 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+
+    width: min(100%, 620px);
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding: 42px 18px 55px;
+}
+
+
+/* =========================
+   DECORATIVE DOTS
+========================= */
+
+.dots {
+
+    text-align: center;
+
+    color: #f4a4c9;
+
+    font-size: 18px;
+
+    letter-spacing: 14px;
+
+    margin-bottom: 35px;
+}
+
+.dots span:nth-child(2) {
+    color: #8fcdf5;
+}
+
+.dots span:nth-child(3) {
+    color: #eaa0e8;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+
+    text-align: center;
+
+    font-size: clamp(
+        28px,
+        7vw,
+        38px
+    );
+
+    line-height: 1.15;
+
+    color: #4f485a;
+
+    margin-bottom: 12px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle {
+
+    text-align: center;
+
+    font-size: 15px;
+
+    color: #8b8193;
+
+    margin-bottom: 74px;
+}
+
+
+/* =========================
+   PHOTO CLOTHESLINE
+========================= */
+
+.photo-line {
+
+    position: relative;
+
+    height: 190px;
+
+    border-top:
+        2px dashed
+        rgba(174,159,194,.35);
+
+    margin-bottom: 34px;
+}
+
+
+/* =========================
+   PHOTOS
+========================= */
+
+.photo {
+
+    position: absolute;
+
+    width: 86px;
+    height: 86px;
+
+    padding: 6px;
+
+    background: white;
+
+    border-radius: 7px;
+
+    box-shadow:
+        0 7px 18px
+        rgba(100,80,120,.15);
+
+    cursor: pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.photo:hover {
+
+    transform:
+        translateY(-7px)
+        rotate(0deg)
+        scale(1.05);
+
+    box-shadow:
+        0 12px 25px
+        rgba(100,80,120,.25);
+
+    z-index: 10;
+}
+
+
+.photo img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+}
+
+
+/* =========================
+   PHOTO CLIPS
+========================= */
+
+.photo::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 13px;
+    height: 24px;
+
+    top: -15px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 4px;
+
+    background: #f5a5cf;
+
+    box-shadow:
+        0 2px 5px
+        rgba(0,0,0,.12);
+
+    z-index: 2;
+}
+
+
+/* =========================
+   PHOTO POSITIONS
+========================= */
+
+.photo:nth-child(1) {
+
+    left: 8%;
+
+    top: 15px;
+
+    transform: rotate(-7deg);
+}
+
+
+.photo:nth-child(2) {
+
+    left: 25%;
+
+    top: 18px;
+
+    transform: rotate(5deg);
+}
+
+
+.photo:nth-child(3) {
+
+    left: 42%;
+
+    top: 9px;
+
+    transform: rotate(-3deg);
+}
+
+
+.photo:nth-child(4) {
+
+    left: 59%;
+
+    top: 19px;
+
+    transform: rotate(6deg);
+}
+
+
+.photo:nth-child(5) {
+
+    left: 76%;
+
+    top: 12px;
+
+    transform: rotate(-5deg);
+}
+
+
+.photo:nth-child(6) {
+
+    left: 43%;
+
+    top: 125px;
+
+    transform: rotate(4deg);
+}
+
+
+/* DIFFERENT CLIP COLORS */
+
+.photo:nth-child(2)::before {
+    background: #9edcf5;
+}
+
+.photo:nth-child(3)::before {
+    background: #c5a7ef;
+}
+
+.photo:nth-child(4)::before {
+    background: #ef9fc8;
+}
+
+.photo:nth-child(5)::before {
+    background: #9edcf5;
+}
+
+.photo:nth-child(6)::before {
+    background: #c5a7ef;
+}
+
+
+/* =========================
+   REASONS CARD
+========================= */
+
+.reasons-card {
+
+    position: relative;
+
+    background:
+        rgba(214,237,255,.88);
+
+    border:
+        2px solid
+        rgba(255,255,255,.9);
+
+    border-radius: 25px;
+
+    padding:
+        14px
+        10px
+        14px
+        12px;
+
+    box-shadow:
+
+        0 14px 35px
+        rgba(125,96,150,.12),
+
+        inset 0 1px 0
+        rgba(255,255,255,.8);
+}
+
+
+/* =========================
+   REASONS LIST
+========================= */
+
+.reasons-list {
+
+    max-height: 405px;
+
+    overflow-y: auto;
+
+    padding-right: 4px;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        #8ecbf1
+        transparent;
+}
+
+
+.reasons-list::-webkit-scrollbar {
+
+    width: 7px;
+}
+
+
+.reasons-list::-webkit-scrollbar-track {
+
+    background: transparent;
+}
+
+
+.reasons-list::-webkit-scrollbar-thumb {
+
+    background: #8ecbf1;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   EACH REASON
+========================= */
+
+.reason {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 7px 5px;
+
+    font-size: 15px;
+
+    line-height: 1.35;
+}
+
+
+/* =========================
+   NUMBER CIRCLE
+========================= */
+
+.number {
+
+    flex:
+        0 0 28px;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.85);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #8bb9d9;
+
+    font-weight: 700;
+
+    font-size: 12px;
+
+    box-shadow:
+        0 2px 7px
+        rgba(80,100,130,.08);
+}
+
+
+/* =========================
+   REASON TEXT
+========================= */
+
+.reason-text {
+
+    padding-top: 5px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 55px;
+}
+
+
+button {
+
+    border: none;
+
+    min-width: 155px;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    font: inherit;
+
+    font-weight: 700;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+button:active {
+
+    transform: scale(.96);
+}
+
+
+/* BACK BUTTON */
+
+.back {
+
+    color: #a77ac6;
+
+    background: white;
+
+    border:
+        2px solid
+        #caa5e7;
+}
+
+
+/* KEEP GOING */
+
+.next {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            100deg,
+            #f19ed0,
+            #c989ee
+        );
+
+    box-shadow:
+        0 9px 23px
+        rgba(218,123,207,.35);
+}
+
+
+/* =========================
+   IMAGE MODAL
+========================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    background:
+        rgba(35,25,45,.78);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .25s ease;
+}
+
+
+.modal.show {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.modal img {
+
+    max-width: 90vw;
+
+    max-height: 80vh;
+
+    border:
+        10px solid
+        white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.4);
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 25px;
+
+    min-width: auto;
+
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.18);
+
+    font-size: 24px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 430px) {
+
+    .page {
+
+        padding:
+            28px
+            14px
+            42px;
+    }
+
+
+    .dots {
+
+        margin-bottom: 28px;
+    }
+
+
+    .subtitle {
+
+        margin-bottom: 65px;
+
+        font-size: 14px;
+    }
+
+
+    .photo {
+
+        width: 72px;
+
+        height: 72px;
+    }
+
+
+    .photo-line {
+
+        height: 165px;
+    }
+
+
+    .photo:nth-child(6) {
+
+        top: 112px;
+    }
+
+
+    .reasons-card {
+
+        border-radius: 21px;
+    }
+
+
+    .reasons-list {
+
+        max-height: 380px;
+    }
+
+
+    .reason {
+
+        font-size: 14px;
+    }
+
+
+    .buttons {
+
+        gap: 12px;
+
+        margin-top: 38px;
+    }
+
+
+    button {
+
+        min-width: 0;
+
+        flex: 1;
+
+        padding:
+            14px
+            12px;
+
+        font-size: 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<main class="page">
+
+
+    <!-- DECORATIVE DOTS -->
+
+    <div class="dots">
+
+        <span>•</span>
+
+        <span>•</span>
+
+        <span>•</span>
+
+    </div>
+
+
+    <!-- TITLE -->
+
+    <h1>
+        Birthday Wishes For EwuraAdjoa     
+    </h1>
+
+
+    <p class="subtitle">
+
+        tap a photo to see it bigger —
+        scroll pauses itself while you read
+
+    </p>
+
+
+    <!-- =========================
+         PHOTO SECTION
+    ========================== -->
+
+    <div class="photo-line">
+
+
+        <div
+            class="photo"
+            onclick="openPhoto(this)"
+        >
+
+            <img
+                src="image5.jpg"
+                alt="Memory 1"
+            >
+
+        </div>
+
+
+        <div
+            class="photo"
+            onclick="openPhoto(this)"
+        >
+
+            <img
+                src="image2.jpg"
+                alt="Memory 2"
+            >
+
+        </div>
+
+
+        <div
+            class="photo"
+            onclick="openPhoto(this)"
+        >
+
+            <img
+                src="image3.jpg"
+                alt="Memory 3"
+            >
+
+        </div>
+
+
+        <div
+            class="photo"
+            onclick="openPhoto(this)"
+        >
+
+            <img
+                src="image4.jpg"
+                alt="Memory 4"
+            >
+
+        </div>
+
+
+        <div
+            class="photo"
+            onclick="openPhoto(this)"
+        >
+
+            <img
+                src="image1.jpg"
+                alt="Memory 5"
+            >
+
+        </div>
+
+
+        <div
+            class="photo"
+            onclick="openPhoto(this)"
+        >
+
+            <img
+                src="image6.jpg"
+                alt="Memory 6"
+            >
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         REASONS
+    ========================== -->
+
+    <section class="reasons-card">
+
+
+        <div class="reasons-list">
+
+
+            <div class="reason">
+
+                <span class="number">
+                    1
+                </span>
+
+                <span class="reason-text">
+                   I hope your day is filled with lots of love, laughter, and all your favorite things. You deserve the absolute best!
+                </span>
+
+            </div>
+
+
+            <div class="reason">
+
+                <span class="number">
+                    2
+                </span>
+
+                <span class="reason-text">
+                    I’m so grateful to have you in my life, and I hope this next year brings you endless happiness and success."
+                </span>
+
+            </div>
+
+
+            <div class="reason">
+
+                <span class="number">
+                    3
+                </span>
+
+                <span class="reason-text">
+                    May your day be as bright, warm, and amazing as you are. Have a fantastic celebration!"
+                </span>
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BUTTONS
+    ========================== -->
+
+    <div class="buttons">
+
+
+        <button
+            class="back"
+            onclick="goBack('pictures.html');"
+        >
+
+            &lt; back
+
+        </button>
+
+
+        <button
+            class="next"
+            onclick="keepGoing('message.html')"
+        >
+
+            keep going
+
+        </button>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================
+     IMAGE POPUP
+========================== -->
+
+<div
+    class="modal"
+    id="photoModal"
+    onclick="closePhoto(event)"
+>
+
+
+    <button
+        class="close"
+        onclick="closePhoto()"
+    >
+
+        ×
+
+    </button>
+
+
+    <img
+        id="largePhoto"
+        src=""
+        alt="Large memory"
+    >
+
+
+</div>
+
+
+
+<script>
+
+
+/* =========================
+   OPEN PHOTO
+========================= */
+
+function openPhoto(photo) {
+
+    const image =
+        photo.querySelector("img");
+
+
+    document
+        .getElementById("largePhoto")
+        .src = image.src;
+
+
+    document
+        .getElementById("photoModal")
+        .classList
+        .add("show");
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+
+/* =========================
+   CLOSE PHOTO
+========================= */
+
+function closePhoto(event) {
+
+    if (
+        event &&
+        event.target.id !== "photoModal" &&
+        !event.target.classList.contains("close")
+    ) {
+
+        return;
+
+    }
+
+
+    document
+        .getElementById("photoModal")
+        .classList
+        .remove("show");
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+function goBack() {
+
+    window.history.back('pictures.html');
+
+    
+}
+
+
+
+/* =========================
+   KEEP GOING BUTTON
+========================= */
+
+function keepGoing() {
+
+    /*
+        Change this filename
+        if your next page has
+        a different name.
+    */
+
+    window.location.href =
+        "message.html";
+
+}
+
+
+
+/* =========================
+   ESC KEY
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            closePhoto();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

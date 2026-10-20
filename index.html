@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient-lights"></div>
+
+  <main>
+    <p class="eyebrow">a little something for you</p>
+    <h1>Before you go any further...</h1>
+
+    <div class="polaroid">
+      <div class="polaroid-photo">
+        <img src="image3.jpg" alt="" onerror="this.style.display='none'; this.parentElement.textContent='🎂';">
+      </div>
+      <div class="polaroid-caption">for the birthday girl</div>
+    </div>
+
+    <div class="sticky-note">
+      <p>you'll need this on the next page</p>
+      <p class="password-text" id="passwordHint"></p>
+    </div>
+
+    <div>
+      <a href="login.html" class="btn-seal">Next →</a>
+    </div>
+  </main>
+
+  <footer class="tiny">just for you</footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("passwordHint").textContent = CONFIG.password;
+  </script>
+</body>
+</html>

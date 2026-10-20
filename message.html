@@ -1,0 +1,651 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.58),
+            rgba(0,0,0,0.58)
+        ),
+        url("https://images.unsplash.com/photo-1513151233558-d860c5398176");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    padding: 20px;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.letter {
+
+    width: min(1100px, 94vw);
+
+    height: min(92vh, 850px);
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 24px;
+
+    padding: 28px 45px;
+
+    color: white;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,0.65);
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    animation: appear 1.2s ease;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    color: #ffd700;
+
+    font-size: clamp(25px, 3vw, 38px);
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 10px rgba(255,215,0,0.7);
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================
+   PARAGRAPHS
+========================= */
+
+.paragraph {
+
+    font-size: clamp(13px, 1.35vw, 17px);
+
+    line-height: 1.42;
+
+    text-align: left;
+
+    white-space: pre-line;
+
+    margin-bottom: 7px;
+
+}
+
+
+/* =========================
+   CURSOR
+========================= */
+
+.cursor {
+
+    display: inline-block;
+
+    width: 2px;
+
+    height: 16px;
+
+    background: #ffd700;
+
+    margin-left: 2px;
+
+    vertical-align: middle;
+
+    animation: blink 0.5s infinite;
+
+}
+
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature {
+
+    flex-shrink: 0;
+
+    text-align: right;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    margin-top: 5px;
+
+    opacity: 0;
+
+    transition: opacity 1.5s ease;
+
+}
+
+
+.signature.show {
+
+    opacity: 1;
+
+}
+
+
+.signature span {
+
+    display: block;
+
+    color: #ffd700;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.94);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    body {
+
+        padding: 10px;
+
+    }
+
+    .letter {
+
+        width: 96vw;
+
+        height: 94vh;
+
+        padding: 22px 25px;
+
+        border-radius: 18px;
+
+    }
+
+    .paragraph {
+
+        font-size: 13px;
+
+        line-height: 1.35;
+
+        margin-bottom: 5px;
+
+    }
+
+}
+
+
+/* =========================
+   PHONE
+========================= */
+
+@media (max-width: 500px) {
+
+    body {
+
+        padding: 7px;
+
+    }
+
+
+    .letter {
+
+        width: 98vw;
+
+        height: 96vh;
+
+        padding: 17px 16px;
+
+        border-radius: 15px;
+
+    }
+
+
+    h1 {
+
+        font-size: 23px;
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .paragraph {
+
+        font-size: 11.5px;
+
+        line-height: 1.32;
+
+        margin-bottom: 4px;
+
+    }
+
+
+    .signature {
+
+        font-size: 14px;
+
+    }
+
+
+    .signature span {
+
+        font-size: 17px;
+
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .letter {
+
+        padding: 13px 12px;
+
+    }
+
+
+    h1 {
+
+        font-size: 20px;
+
+        margin-bottom: 7px;
+
+    }
+
+
+    .paragraph {
+
+        font-size: 10.5px;
+
+        line-height: 1.25;
+
+        margin-bottom: 3px;
+
+    }
+
+
+    .signature {
+
+        font-size: 12px;
+
+    }
+
+
+    .signature span {
+
+        font-size: 15px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="letter">
+
+
+    <h1>
+        Happy Birthday Ewura! 🎉✨
+    </h1>
+
+
+    <div class="message">
+
+        <div
+            class="paragraph"
+            id="text1">
+        </div>
+
+
+        <div
+            class="paragraph"
+            id="text2">
+        </div>
+
+
+        <div
+            class="paragraph"
+            id="text3">
+        </div>
+
+
+        <div
+            class="paragraph"
+            id="text4">
+        </div>
+
+
+        <div
+            class="paragraph"
+            id="text5">
+        </div>
+
+    </div>
+
+
+    <div
+        class="signature"
+        id="signature">
+
+        From,
+
+        <span>
+            Elijah IQ 
+        </span>
+
+    </div>
+
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   MESSAGE
+========================= */
+
+const messages = [
+
+`
+My Dearest Ewura Adjoa,
+
+Happy Birthday, beautiful soul!
+
+I just want you to know how truly happy I am to have you as my friend. You have one of the most beautiful hearts I have ever known — so loving, so caring, so genuinely shy and yet so full of happiness. Your presence alone brings a soft light to any moment.
+
+It is true, we have not really spent so much time together, but please believe me, the small moments we have shared are always a memory I hold close to my heart. They mean so much more than time could ever measure.
+
+On your special day, this is my prayer for you:
+
+"They will be like a tree planted by the water that sends out its roots by the stream. It does not fear when heat comes; its leaves are always green. It has no worries in a year of drought and never fails to bear fruit." - Jeremiah 17:8_
+
+May your life be just like that tree — always rooted, always green, always fruitful, always strong even in hard seasons. May your loving heart never grow tired, and may your happiness never fade.
+
+Enjoy your day to the fullest, my dear friend. You deserve all the love and joy in the world.
+
+Happy Birthday, Ewura Adjoa!
+`
+
+
+];
+
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const elements = [
+
+    document.getElementById("text1"),
+
+    document.getElementById("text2"),
+
+    document.getElementById("text3"),
+
+    document.getElementById("text4"),
+
+    document.getElementById("text5")
+
+];
+
+
+/* =========================
+   FAST TYPING
+========================= */
+
+const typingSpeed = 8;
+
+
+/* =========================
+   TYPE FUNCTION
+========================= */
+
+function typeText(element, text) {
+
+    return new Promise(resolve => {
+
+        let index = 0;
+
+
+        const cursor =
+            document.createElement("span");
+
+        cursor.className = "cursor";
+
+
+        element.appendChild(cursor);
+
+
+        function type() {
+
+            if (index < text.length) {
+
+                const character =
+                    document.createTextNode(
+                        text[index]
+                    );
+
+
+                element.insertBefore(
+                    character,
+                    cursor
+                );
+
+
+                index++;
+
+
+                setTimeout(
+                    type,
+                    typingSpeed
+                );
+
+            }
+
+            else {
+
+                cursor.remove();
+
+                resolve();
+
+            }
+
+        }
+
+
+        type();
+
+    });
+
+}
+
+
+/* =========================
+   START TYPING
+========================= */
+
+async function startTyping() {
+
+    for (
+        let i = 0;
+        i < messages.length;
+        i++
+    ) {
+
+        await typeText(
+            elements[i],
+            messages[i]
+        );
+
+    }
+
+
+    /* SHOW SIGNATURE */
+
+    document
+        .getElementById("signature")
+        .classList
+        .add("show");
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+window.addEventListener(
+    "load",
+    () => {
+
+        setTimeout(
+            startTyping,
+            500
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
+```

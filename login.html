@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enter Password</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient-lights"></div>
+
+  <main>
+    <p class="eyebrow">locked</p>
+    <h1>A little door before your day</h1>
+    <p>Type the password from the note to open it.</p>
+
+    <form id="loginForm" autocomplete="off">
+      <input
+        type="password"
+        id="passwordInput"
+        placeholder="password"
+        aria-label="Password"
+        autofocus
+      >
+      <button type="submit" class="btn-seal">Unlock 🔓</button>
+      <p class="error hidden" id="errorMsg">That's not quite it — check the note again 💛</p>
+    </form>
+
+    <a href="index.html" class="btn-ghost">← back to the note</a>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    const form = document.getElementById("loginForm");
+    const input = document.getElementById("passwordInput");
+    const err = document.getElementById("errorMsg");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (input.value.trim().toLowerCase() === CONFIG.password.trim().toLowerCase()) {
+        sessionStorage.setItem("bday_unlocked", "true");
+        window.location.href = "pictures.html";
+      } else {
+        err.classList.remove("hidden");
+        form.classList.add("shake");
+        input.value = "";
+        input.focus();
+        setTimeout(() => form.classList.remove("shake"), 400);
+      }
+    });
+  </script>
+</body>
+</html>
