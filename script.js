@@ -16,8 +16,9 @@ const CONFIG = {
     "image2.jpg",
     "image5.jpg",
     "image3.jpg",
-    "video1.mp4",
+    "video7.mp4",
     "video2.mp4",
+    "video1.mp4"
     "video3.mp4"
     
   ],
