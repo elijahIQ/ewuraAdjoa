@@ -1,0 +1,311 @@
+/* ========= Design tokens ========= */
+:root{
+  --bg-deep:#221527;
+  --bg-deep-2:#2e1b35;
+  --gold:#d9a566;
+  --blush:#e8a9c3;
+  --cream:#f6ecdd;
+  --muted:#c9b8c7;
+  --shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+*{box-sizing:border-box;}
+
+html,body{height:100%;}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:radial-gradient(ellipse at top, var(--bg-deep-2), var(--bg-deep));
+  color:var(--cream);
+  font-family:'Poppins', sans-serif;
+  overflow-x:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2.5rem 1.5rem;
+  position:relative;
+}
+
+/* ========= Ambient floating light particles ========= */
+.ambient-lights{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:0;
+}
+.ember{
+  position:absolute;
+  bottom:-20px;
+  border-radius:50%;
+  background:radial-gradient(circle, var(--gold), transparent 70%);
+  opacity:0;
+  animation:floatUp linear infinite;
+}
+@keyframes floatUp{
+  0%{ transform:translateY(0) translateX(0); opacity:0; }
+  10%{ opacity:0.9; }
+  90%{ opacity:0.6; }
+  100%{ transform:translateY(-110vh) translateX(var(--drift,20px)); opacity:0; }
+}
+
+.confetti-piece{
+  position:absolute;
+  top:-10px;
+  width:8px;
+  height:14px;
+  opacity:0.9;
+  animation:confettiFall linear forwards;
+}
+@keyframes confettiFall{
+  to{ transform:translateY(110vh) rotate(720deg); opacity:0; }
+}
+
+/* ========= Typography ========= */
+main{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  max-width:540px;
+  width:100%;
+}
+
+h1{
+  font-family:'Playfair Display', serif;
+  font-weight:600;
+  font-size:1.7rem;
+  letter-spacing:0.01em;
+  margin-bottom:0.5rem;
+}
+
+p{ color:var(--muted); }
+
+.eyebrow{
+  font-family:'Poppins', sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.28em;
+  font-size:0.7rem;
+  color:var(--gold);
+  margin-bottom:1rem;
+}
+
+.script{
+  font-family:'Dancing Script', cursive;
+  font-size:3rem;
+  line-height:1.1;
+  color:var(--blush);
+  margin:0 0 0.6rem;
+}
+
+/* ========= Polaroid (index page) ========= */
+.polaroid{
+  background:#fdfaf4;
+  padding:14px 14px 42px;
+  border-radius:4px;
+  box-shadow:var(--shadow);
+  display:inline-block;
+  transform:rotate(-4deg);
+  margin-bottom:2.2rem;
+}
+.polaroid-photo{
+  width:220px;
+  height:260px;
+  max-width:60vw;
+  border-radius:2px;
+  background:linear-gradient(135deg,#e8a9c3,#d9a566);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:3rem;
+  overflow:hidden;
+}
+.polaroid-photo img{ width:100%; height:100%; object-fit:cover; }
+.polaroid-caption{
+  font-family:'Dancing Script', cursive;
+  color:#3a2c22;
+  margin-top:12px;
+  font-size:1.3rem;
+}
+
+/* ========= Sticky note (password reveal) ========= */
+.sticky-note{
+  background:#f2e6b8;
+  color:#4a3b1e;
+  padding:1.1rem 1.7rem;
+  border-radius:2px;
+  transform:rotate(3deg);
+  box-shadow:var(--shadow);
+  display:inline-block;
+  margin-bottom:2.4rem;
+  font-family:'Dancing Script', cursive;
+}
+.sticky-note p{ color:#4a3b1e; margin:0; font-size:1.05rem; }
+.password-text{
+  font-size:2.1rem;
+  font-weight:700;
+  letter-spacing:3px;
+  margin-top:0.3rem !important;
+}
+
+/* ========= Buttons ========= */
+.btn-seal{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  background:var(--gold);
+  color:#2a1a12;
+  padding:0.9rem 2.3rem;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:0.02em;
+  box-shadow:0 10px 30px rgba(217,165,102,0.35);
+  transition:transform .25s ease, box-shadow .25s ease;
+  border:none;
+  cursor:pointer;
+  font-family:'Poppins', sans-serif;
+  font-size:1rem;
+}
+.btn-seal:hover{ transform:translateY(-3px); box-shadow:0 14px 36px rgba(217,165,102,0.5); }
+.btn-seal:focus-visible{ outline:2px solid var(--cream); outline-offset:3px; }
+
+.btn-ghost{
+  color:var(--muted);
+  text-decoration:none;
+  border-bottom:1px solid rgba(201,184,199,0.5);
+  padding-bottom:2px;
+  font-size:0.9rem;
+  display:inline-block;
+  margin-top:1rem;
+}
+.btn-ghost:hover{ color:var(--cream); border-color:var(--cream); }
+
+/* ========= Login form ========= */
+#loginForm{
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  align-items:center;
+  margin-top:1.8rem;
+}
+#passwordInput{
+  padding:0.95rem 1.2rem;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.2);
+  background:rgba(255,255,255,0.06);
+  color:var(--cream);
+  font-size:1rem;
+  width:260px;
+  max-width:80vw;
+  text-align:center;
+  letter-spacing:0.15em;
+}
+#passwordInput::placeholder{ color:rgba(246,236,221,0.4); letter-spacing:normal; }
+#passwordInput:focus-visible{ outline:2px solid var(--gold); }
+
+.error{ color:#e88686; font-size:0.9rem; min-height:1.2em; }
+.hidden{ display:none; }
+.shake{ animation:shake .4s; }
+@keyframes shake{
+  0%,100%{ transform:translateX(0); }
+  25%{ transform:translateX(-8px); }
+  75%{ transform:translateX(8px); }
+}
+
+/* ========= Carousel (pictures page) ========= */
+.carousel{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  justify-content:center;
+  margin-bottom:1.3rem;
+}
+.slide-frame{
+  position:relative;
+  width:280px;
+  height:340px;
+  max-width:62vw;
+  max-height:62vw;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:#3a2740;
+}
+.slide-frame img, .slide-frame video{ width:100%; height:100%; object-fit:cover; display:block; background:#000; }
+.slide-index{
+  position:absolute;
+  bottom:10px;
+  right:12px;
+  background:rgba(0,0,0,0.5);
+  padding:2px 10px;
+  border-radius:999px;
+  font-size:0.75rem;
+  color:var(--cream);
+}
+.arrow{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  color:var(--cream);
+  width:44px;
+  height:44px;
+  min-width:44px;
+  border-radius:50%;
+  font-size:1.4rem;
+  cursor:pointer;
+  transition:background .2s ease;
+}
+.arrow:hover{ background:rgba(255,255,255,0.18); }
+.arrow:focus-visible{ outline:2px solid var(--gold); }
+
+.dots{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  margin-bottom:2rem;
+  flex-wrap:wrap;
+}
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.25);
+  cursor:pointer;
+  border:none;
+  padding:0;
+}
+.dot.active{ background:var(--gold); }
+
+/* ========= Message page ========= */
+.candles{ font-size:2rem; margin-bottom:0.4rem; letter-spacing:0.4rem; }
+.prayer{
+  line-height:1.5;
+  color:var(--cream);
+  font-size:10px;
+  white-space:pre-line;
+  margin:1.6rem 0 2.2rem;
+  text-align:left;
+}
+
+footer.tiny{
+  position:fixed;
+  bottom:10px;
+  left:0;
+  right:0;
+  text-align:center;
+  font-size:0.7rem;
+  color:rgba(201,184,199,0.35);
+  z-index:1;
+}
+
+/* ========= Responsive ========= */
+@media (max-width:480px){
+  h1{ font-size:1.4rem; }
+  .script{ font-size:2.3rem; }
+  #passwordInput{ width:220px; }
+}
+
+/* ========= Reduced motion ========= */
+@media (prefers-reduced-motion: reduce){
+  .ember, .confetti-piece{ animation:none !important; display:none; }
+}
